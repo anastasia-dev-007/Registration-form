@@ -56,7 +56,7 @@
 
               <form action="/action_page.php">
                 <fieldset>
-                    <legend>Personal details:</legend>
+                    <legend><b>Personal details:</b></legend>
                     <label for="name">Name:</label>
                     <input id="name" placeholder="John"required/>
                     <br /> <br />
@@ -64,8 +64,10 @@
                     <input id="surname" placeholder="Smith" required/>
                     <br /><br />
                     <label for="phone">Phone number:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="079-000-000" required><br />
+                    <input type="tel" id="phone" name="phone" placeholder="079-000-000" required>
                     <br />
+
+                   
                     <table>
                         <tr>
                             <td>Gender:</td>
@@ -105,9 +107,10 @@
                     <option value="Russian">Russian</option>
                 </select>
                 <br /><br />
-
+            </fieldset>
+            <br />
                 <fieldset>
-                    <legend>Address details:</legend>
+                    <legend><b>Address details:</b></legend>
                     <table>
                         <tr>
                             <td>Address:</td>
@@ -129,12 +132,64 @@
 <label for="zip">ZIP Code:</label>
 <input type="text" name="zip" placeholder="2064" maxlength="4" style="width: 30px;"/>
 <!-- Narrowed the ZIP code box using style -->
-                    
                 </fieldset>
+
+<h3>Select your favorite destination below</h3>
+<fieldset>
+    <legend><b>Travel details:</b></legend> 
+<table>
+    <tr>
+        <td>
+            <label for="originicountry">Origin country:</label><br />
+            <select id="originicountry" name="origincountry">
+                <option value="Moldova">Moldova</option>
+                <option value="Romania">Romania</option>
+                <option value="Ukraina">Ukraina</option>
+                <option value="Bulgary">Bulgary</option>
+                <option value="Russia">Russia</option>
+            </select>
+        </td>
+        <td><label for="destinationcountry">Destination country:</label><br/>
+            <select id="destinationcountry" name="destinationcountry">
+                <option value="Bali">Bali</option>
+                <option value="Singapure">Singapure</option>
+                <option value="Japan">Japan</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="Australia">Australia</option>
+                <option value="USA">USA</option>
+                <option value="Brazil">Brazil</option>
+                <option value="South Coreea">South Coreea</option>
+                <option value="Netherlands">Netherlands</option>
+                <option value="Belgium">Belgium</option>
+                <option value="France">France</option>
+                <option value="Sweden">Sweden</option>
+                <option value="Spain">Spain</option>
+                <option value="Argentina">Argentina</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Island">Island</option>
+            </select>
+        </td>
+        <td><label for="flightdate">Flight date:</label><br />
+            <input type="date" id="flightdate" name="flightdate" />
+        </td>
+        <td>
+            <label for="returndate">Return date:</label><br />
+            <input type="date" id="returndate" name="returndate">
+        </td>
+        <td>
+            <label for="persons">Persons:</label><br />
+            <input type="number" id="persons" name="person" min="0" max="2" style="width: 30px;"/>
+            <td><br /><input type="button" onclick="alert"('OK!') value="OK">
+            </td>
+        </td>
+    </tr>
+</table>
+</fieldset>
+<br/><br/>
                    
 
                     <input type="submit" value="Submit">
-                </fieldset>
+                
               </form>
 <br />
               <input type="button" onclick="alert('Hope you enjoyed this content')" value="Surprise message!">
