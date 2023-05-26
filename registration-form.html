@@ -107,6 +107,9 @@
                     <option value="Russian">Russian</option>
                 </select>
                 <br /><br />
+                <label for="myfile">Upload photo:</label>
+                <input type="file" id="file" name="file">
+                <br />
             </fieldset>
             <br />
                 <fieldset>
@@ -114,7 +117,7 @@
                     <table>
                         <tr>
                             <td>Address:</td>
-                            <td><textarea name="address" rows="2" cols="50"></textarea></td>
+                            <td><textarea name="address" rows="1" cols="60" placeholder="str. Riga, 69"></textarea></td>
                         </tr>
                     </table>
                     <label for="city">City:</label>
@@ -133,8 +136,8 @@
 <input type="text" name="zip" placeholder="2064" maxlength="4" style="width: 30px;"/>
 <!-- Narrowed the ZIP code box using style -->
                 </fieldset>
+                <br /><br />
 
-<h3>Select your favorite destination below</h3>
 <fieldset>
     <legend><b>Travel details:</b></legend> 
 <table>
@@ -150,7 +153,8 @@
             </select>
         </td>
         <td><label for="destinationcountry">Destination country:</label><br/>
-            <select id="destinationcountry" name="destinationcountry">
+            <input list="destinationcountry" name="destinationcountry">
+            <datalist id="destinationcountry">
                 <option value="Bali">Bali</option>
                 <option value="Singapure">Singapure</option>
                 <option value="Japan">Japan</option>
@@ -167,7 +171,7 @@
                 <option value="Argentina">Argentina</option>
                 <option value="United Kingdom">United Kingdom</option>
                 <option value="Island">Island</option>
-            </select>
+            </datalist>
         </td>
         <td><label for="flightdate">Flight date:</label><br />
             <input type="date" id="flightdate" name="flightdate" />
@@ -190,32 +194,89 @@
 <label for="yourtext"><b>Describe your dream destination:</b></label><br/>
 <textarea name="yourtext" id="yourtext" rows="10" cols="100"></textarea>
 <br /><br />
+<label id="lasttravel">Upload a photo from your last travel:</label>
+<input type="file" id="lasttravel" name="lasttravel"/>
+<br /><br />
 
 <fieldset>
     <legend><b>Contact details:</b></legend>
 <label for="email">e-mail:</label>
-<input type="email" id="email" name="email">
-<br />
+<input type="email" id="email" name="email" placeholder="john.smith@gmail.com" maxlength="100">
+<br /><br />
 <label for="password">password:</label>
 <input type="password" id="password" name="password">
 <br /><br />
 <input type="submit" value="Send">
 </fieldset>
+<br />
+<fieldset>
+    <legend><b>Random details:</b></legend>
+    <label for="color">Select your favorite color:</label>
+    <input type="color" id="color" name="color" value="ff0000">
+    <br /><br />
+    <label for="catbday">Your cat's birthday:</label>
+    <input type="datetime-local" id="catbday" name="catbday">
+    <br /><br />
+    <label for="maritalstatus">Here is a hidden field:</label>
+    <input type="hidden" id="maritalstatus" name="maritalstatus" value="married">
+   <br /> <small>there is marital status</small>
+   <label for="url">Share your favorite website:</label>
+   <input type="url" id="url" name="url">
+</fieldset>
 
 <br/><br/>
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Submit Form">
                 
               </form>
+              <br /><br/>
+
+<!--Here is button as an image-->
+<fieldset>
+    <legend><b>Rating details:</b></legend>
+<p>Rate this registration form by clicking below buttons:</p>
+<form action="/action_page.php">
+<input type="image" src="like.png" alt="submit" width="58" height="58">
+<input type="image" src="dislike.png" alt="submit" width="58" height="58">
+<br/><hr /><br/>
+<label for="rating">Rate this page from 0 to 100</label>
+<input type="range" id="rating" name="rating" min="0" max="100">
+<!--Can't understand why output element is not working-->
+<p>Calculate 53+x:</p>
+<form action="/action_page.php"
+oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+0
+<input type="range" id="a" name="a" value="53">
+100 +
+<input type="number" id="b" name="b" value="47">
+=
+<output name="x" for="a b"></output>
+<br/>
+</form>
+
+<br/>
+<form action="/action_page.php"
+oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range" id="a" name="a" value="50">
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  <input type="submit">
+</form>
+</fieldset>
 <br />
-              <input type="button" onclick="alert('Hope you enjoyed this content')" value="Surprise message!">
+<p>As a reward that you have reached the bottom of the page below is a surprise button! Click it!</p>
+              <input type="button" onclick="alert('A BIG thank you for the time dedicated to us! Hope you enjoyed this content!')" value="Surprise message!">
 <br />
         </main>
 
         <footer>
-            <pre>
-                Author: 
-                Anastasia Tataru<br>
-                <a href="anastasia.dev007@gmail.com">anastasia.dev007@gmail.com</a></pre>
+<pre>
+Author: 
+Anastasia Tataru<br>
+<a href="anastasia.dev007@gmail.com">anastasia.dev007@gmail.com</a></pre>
         </footer>
 
     </body>
