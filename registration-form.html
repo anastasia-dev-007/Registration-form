@@ -7,6 +7,11 @@
                 border: 1px solid;
             }
         </style>
+        <style>
+            table, th, tr, td {
+                border: 1px solid;
+            }
+        </style>
     </head>
 
     <body>
@@ -270,6 +275,31 @@ oninput="x.value=parseInt(a.value)+parseInt(b.value)">
   <input type="submit">
 </form>
 </fieldset>
+<br />
+<p>Here I just tried to create table with merged columns and rows:</p>
+<table>
+    <tr>
+    <th rowspan="2">gender</th>
+    <th colspan="2">average</th>
+    <th rowspan="2">other category</th>
+    </tr>
+    <tr>
+        <th>height</th>
+        <th>weight</th>
+    </tr>
+    <tr>
+        <th>males</th>
+        <td>height</td>
+        <td>0.003</td>
+        <td>yyy</td>
+    </tr>
+        <tr>
+        <th>females</th>
+        <td>1.9</td>
+        <td>0.002</td>
+        <td>xxx</td>
+    </tr>
+</table>
 <br />
 <p>As a reward that you have reached the bottom of the page below is a surprise button! Click it!</p>
               <input type="button" onclick="alert('A BIG thank you for the time dedicated to us! Hope you enjoyed this content!')" value="Surprise message!">
